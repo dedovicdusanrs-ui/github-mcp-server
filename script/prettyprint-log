@@ -66,7 +66,7 @@ else
   is_terminal="0"
 fi
 
-# Processs each log line, print whether is stdin or stdout, using different
+# Process each log line, print whether is stdin or stdout, using different
 # colors if we output to a terminal, and pretty print json data using jq
 sed -nE 's/^.*\[(stdin|stdout)\]:.* ([0-9]+) bytes: (.*)\\n"$/\1 \2 \3/p' $input |
 while read -r io bytes json; do
